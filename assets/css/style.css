@@ -659,24 +659,31 @@ body {
 }
 
 .story_section .wd_post_date {
-  background: url(../images/small_heart.svg);
+  background: url(../images/small_heart1.png);
   background-size: 100% 100%;
   position: absolute;
   z-index: 10;
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
   bottom: 0;
   text-align: center;
   padding: 27px 0px;
   font-family: "Vollkorn", serif;
 }
 
+.wd_post_date .year {
+  color: #fadadd; /* Warna teks pink soft */
+  font-size: 10px; /* Ukuran font */
+  display: block; /* Agar bisa diatur posisi/spacing */
+  margin-bottom: 100px; /* Jarak dari elemen atas */
+}
+
 .wd_left {
-  left: 32px;
+  left: 35px;
 }
 
 .wd_right {
-  right: 32px;
+  right: 35px;
 }
 
 .story_section .wd_post_date span {
@@ -1066,6 +1073,7 @@ body {
   float: left;
   width: 100%;
   padding: 0px;
+  display: none !important;
 }
 
 .simform {
@@ -1704,8 +1712,8 @@ h6,
 
 @media (max-width: 768px) {
   .couple-names {
-    font-size: 2.2rem;
-    margin-top: 50px;
+    font-size: 6.2rem;
+    margin-top: 30px;
   }
 
   .event-date {
@@ -1805,4 +1813,28 @@ h6,
   line-height: 1.7;
   text-align: justify;
   color: #444;
+}
+
+.undangan-text {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: -10px; /* naikkan semua teks kalau perlu */
+}
+
+.undangan-text p {
+  margin: 6px 0; /* jarak seragam antar semua baris */
+}
+
+.undangan-text #namaUndangan #yth {
+  font-size: 16px;
+  margin-top: 70px;
+  font-weight: 700;
+}
+
+.undangan-text .nama-penerima {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 70px;
+  color: #ffffff;
 }
