@@ -1833,16 +1833,17 @@ h6,
 }
 
 .undangan-text .nama-penerima {
-  font-size: 25px;
+  font-size: 25px;      /* default */
   font-weight: 600;
   margin-bottom: 70px;
   color: #ffffff;
-	
-  white-space: nowrap;     
-  overflow: hidden;        
-  text-overflow: ellipsis; 
-  display: block;          
-  max-width: 100%; 
+  text-align: center;
+
+  white-space: nowrap;  /* tetap satu baris */
+  overflow: visible;    /* jangan sembunyikan teks */
+  display: inline-block;
+  max-width: 90vw;      /* batasi lebar sesuai layar HP */
 }
+
 
 
