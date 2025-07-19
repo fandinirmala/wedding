@@ -1837,4 +1837,12 @@ h6,
   font-weight: 600;
   margin-bottom: 70px;
   color: #ffffff;
+	
+  white-space: nowrap;     
+  overflow: hidden;        
+  text-overflow: ellipsis; 
+  display: block;          
+  max-width: 100%; 
 }
+
+
