@@ -807,7 +807,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
   const nama = params.get("nama");
 
   if (nama) {
-    namaElem.innerText = decodeURIComponent(nama);
+   namaElem.innerText = decodeURIComponent(nama).replace(/-/g, " ");
   }
 
   window.addEventListener("load", () => resizeTextToFit(namaElem));
