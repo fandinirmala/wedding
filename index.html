@@ -788,27 +788,19 @@ Purchase: http://themeforest.net/user/kamleshyadav
     toggleBtn.innerHTML = '🔊';
 }
 </script>
+
 <script>
+  
   const params = new URLSearchParams(window.location.search);
   const nama = params.get("nama");
-  const namaElem = document.getElementById("namaPenerima");
 
+ 
   if (nama) {
-    namaElem.innerText = decodeURIComponent(nama);
+    document.getElementById("namaPenerima").innerText = decodeURIComponent(nama);
   }
-
-  // Autoscale kalau terlalu panjang
-  const resizeText = () => {
-    let fontSize = parseInt(window.getComputedStyle(namaElem).fontSize);
-    while (namaElem.scrollWidth > namaElem.offsetWidth && fontSize > 10) {
-      fontSize -= 1;
-      namaElem.style.fontSize = fontSize + "px";
-    }
-  };
-
-  window.addEventListener('load', resizeText);
-  window.addEventListener('resize', resizeText);
 </script>
+
+    
 </body>
 
 </html>
