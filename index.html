@@ -70,7 +70,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
                             <div class="undangan-text">
                             <p class=" yth mb-2 text-white">Kepada Yth.</p>
                             <p id="namaUndangan" class="mb-4 text-white fw-bold">Bapak/Ibu Tamu Undangan</p>
-                            <p class="nama-penerima text-white fw-bold">Charles dan Pasangan</p>
+                           <p class="nama-penerima text-white fw-bold" id="namaPenerima">Tamu Undangan</p>
                             </div>
 
                                 <h4><span class="fa fa-calendar mt-2"></span>25 Juli 2025</h4>
@@ -788,7 +788,16 @@ Purchase: http://themeforest.net/user/kamleshyadav
     toggleBtn.innerHTML = '🔊';
 }
 </script>
+<script>
+  // Ambil parameter dari URL
+  const params = new URLSearchParams(window.location.search);
+  const nama = params.get("nama");
 
+  // Kalau ada parameter "nama", tampilkan di halaman
+  if (nama) {
+    document.getElementById("namaPenerima").innerText = decodeURIComponent(nama);
+  }
+</script>
 </body>
 
 </html>
