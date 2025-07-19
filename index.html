@@ -790,30 +790,32 @@ Purchase: http://themeforest.net/user/kamleshyadav
 </script>
 
 <script>
-  // Ambil parameter nama dari URL
-  const params = new URLSearchParams(window.location.search);
-  const nama = params.get("nama");
-  const namaElem = document.getElementById("namaPenerima");
-
-  if (nama) {
-    namaElem.innerText = decodeURIComponent(nama);
-  }
-
-  // Fungsi untuk mengecilkan font jika teks terlalu panjang
   function resizeTextToFit(el) {
-    let fontSize = parseInt(window.getComputedStyle(el).fontSize);
     const parentWidth = el.parentElement.offsetWidth;
+    let fontSize = 25; // ukuran awal
+    el.style.fontSize = fontSize + "px";
 
-    while (el.scrollWidth > parentWidth && fontSize > 10) { 
+    // perkecil font sampai muat
+    while (el.scrollWidth > parentWidth && fontSize > 12) {
       fontSize--;
       el.style.fontSize = fontSize + "px";
     }
   }
 
-  // Jalankan ketika halaman dimuat dan ketika ukuran layar berubah
+  // ambil nama dari URL
+  const params = new URLSearchParams(window.location.search);
+  const namaElem = document.getElementById("namaPenerima");
+  const nama = params.get("nama");
+
+  if (nama) {
+    namaElem.innerText = decodeURIComponent(nama);
+  }
+
+  // jalankan di awal dan saat layar berubah
   window.addEventListener("load", () => resizeTextToFit(namaElem));
   window.addEventListener("resize", () => resizeTextToFit(namaElem));
 </script>
+
 
     
 </body>
