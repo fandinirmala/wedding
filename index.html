@@ -791,18 +791,17 @@ Purchase: http://themeforest.net/user/kamleshyadav
 
 <script>
   function resizeTextToFit(el) {
-    const parentWidth = el.parentElement.offsetWidth;
+    const maxWidth = window.innerWidth * 0.9; // 90% layar
     let fontSize = 25; // ukuran awal
     el.style.fontSize = fontSize + "px";
 
     // perkecil font sampai muat
-    while (el.scrollWidth > parentWidth && fontSize > 10) {
+    while (el.scrollWidth > maxWidth && fontSize > 12) {
       fontSize--;
       el.style.fontSize = fontSize + "px";
     }
   }
 
-  // ambil nama dari URL
   const params = new URLSearchParams(window.location.search);
   const namaElem = document.getElementById("namaPenerima");
   const nama = params.get("nama");
@@ -811,7 +810,6 @@ Purchase: http://themeforest.net/user/kamleshyadav
     namaElem.innerText = decodeURIComponent(nama);
   }
 
-  // jalankan di awal dan saat layar berubah
   window.addEventListener("load", () => resizeTextToFit(namaElem));
   window.addEventListener("resize", () => resizeTextToFit(namaElem));
 </script>
